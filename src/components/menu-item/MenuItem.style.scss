@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@400;500;700&display=swap');
+
+
+.menu-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px ;
+    grid-column: span 2;
+    grid-row: span 3;
+    overflow: hidden;
+
+    &:hover{
+        cursor: pointer;
+
+        & .background-img{
+            transform: scale(1.1);
+            transition: transform 4s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+
+        & .content-item{
+            opacity: 0.9;
+        }
+    }
+
+    .background-img{
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .content-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.6;
+        color: rgb(146, 145, 145);
+        padding: 10px 20px;
+        font-family: Open Sans Condensed;
+        border: solid 2px rgb(146, 145, 145);
+        position: absolute;
+    }
+    
+    &:nth-child(4), &:nth-child(5){
+        grid-row: span 5;
+        grid-column: span 3;
+    }
+
+}

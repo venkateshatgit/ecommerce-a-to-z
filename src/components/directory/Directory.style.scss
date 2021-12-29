@@ -1,0 +1,8 @@
+.directory{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 10px;
+    width: 80%;
+    height: 80vh;
+}
