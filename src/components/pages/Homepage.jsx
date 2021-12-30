@@ -7,13 +7,10 @@ import './Homepage.style.scss';
 function Homepage() {
     return (
         <div className='homepage'>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Directory/>}/>
-                    <Route path="/shop" element={ <ShopPage/>}/>
-                </Routes>
-            </BrowserRouter>
-
+            <Routes>
+                <Route path="/" element={<Directory/>}/>
+                <Route path="/shop" element={ <ShopPage/>}/>
+            </Routes>
         </div>
     );
 }
