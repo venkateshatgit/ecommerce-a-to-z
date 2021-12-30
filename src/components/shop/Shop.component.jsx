@@ -1,23 +1,25 @@
 import {useState} from 'react';
-import CollectionPreview from '../collection-preview/collection-preview.component';
 import SHOP_Data from './shop_data';
 import './shop.style.scss'
+import CollectionPreview from '../collection-preview/CollectionPreview.component';
 
 function ShopPage() {
 
-    const [collection, setCollection] = useState(SHOP_Data)
+    const [collections, setCollections] = useState(SHOP_Data)
 
     return (  
-        <div className='shop'>
-            <h1>Shop</h1>
-            <div className='shop-list'>
+        <div className='shop-page'>
+            <h1>Collections</h1>
+            <div className="collections">
                 {
-                    collection.map( item => (
-                        <CollectionPreview key={item.id}  title={item.title} itemList={item.items} id={item.id}/>
-                    ))
+                    collections.map( collection => (
+                        <CollectionPreview 
+                            key={collection.id} 
+                            collectionTitle={collection.title} 
+                            collectionItems={collection.items}/>
+                    ) )
                 }
             </div>
-           
         </div>
     );
 }
