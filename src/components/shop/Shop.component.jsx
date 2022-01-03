@@ -25,16 +25,3 @@ function ShopPage() {
 }
 
 export default ShopPage;
-
-                // SHOP_Data.map( item => (
-                //     <>
-                //         <h1>{item.title}</h1>
-                //         {item.items
-                //         .filter( x => x.id <=4 )
-                //         .map( element =>(
-                //             <p>{element.name}</p>
-                //         ))}
-                        
-                //     </>
-                    
-                // ))
